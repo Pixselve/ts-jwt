@@ -1,4 +1,4 @@
-var jwt = require('../index');
+var jwt = require('../src');
 var expect = require('chai').expect;
 
 describe('issue 304 - verifying values other than strings', function() {

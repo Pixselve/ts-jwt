@@ -1,4 +1,4 @@
-var jwt = require('../index');
+var jwt = require('../src');
 
 var expect = require('chai').expect;
 var assert = require('chai').assert;

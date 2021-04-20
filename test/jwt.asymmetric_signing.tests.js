@@ -1,5 +1,5 @@
-var jwt = require('../index');
-var PS_SUPPORTED = require('../lib/psSupported');
+var jwt = require('../src');
+var PS_SUPPORTED = require('../src/lib/psSupported');
 var fs = require('fs');
 var path = require('path');
 

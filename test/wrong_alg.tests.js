@@ -1,8 +1,8 @@
 var fs = require('fs');
 var path = require('path');
-var jwt = require('../index');
-var JsonWebTokenError = require('../lib/JsonWebTokenError');
-var PS_SUPPORTED = require('../lib/psSupported');
+var jwt = require('../src');
+var JsonWebTokenError = require('../src/lib/JsonWebTokenError');
+var PS_SUPPORTED = require('../src/lib/psSupported');
 var expect = require('chai').expect;
 
 

@@ -1,9 +1,9 @@
-var jwt = require('../index');
+var jwt = require('../src');
 var jws = require('jws');
 var fs = require('fs');
 var path = require('path');
 var sinon = require('sinon');
-var JsonWebTokenError = require('../lib/JsonWebTokenError');
+var JsonWebTokenError = require('../src/lib/JsonWebTokenError');
 
 var assert = require('chai').assert;
 var expect = require('chai').expect;

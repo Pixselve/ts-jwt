@@ -1,7 +1,7 @@
-var jwt = require('../index');
+var jwt = require('../src');
 var expect = require('chai').expect;
 var jws = require('jws');
-var PS_SUPPORTED = require('../lib/psSupported');
+var PS_SUPPORTED = require('../src/lib/psSupported');
 
 describe('signing a token asynchronously', function() {
 

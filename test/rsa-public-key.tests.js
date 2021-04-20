@@ -1,5 +1,5 @@
 var jwt = require('../');
-var PS_SUPPORTED = require('../lib/psSupported');
+var PS_SUPPORTED = require('../src/lib/psSupported');
 
 describe('public key start with BEGIN RSA PUBLIC KEY', function () {
 
