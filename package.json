@@ -48,6 +48,7 @@
     "semver": "^5.6.0"
   },
   "devDependencies": {
+    "@types/jws": "^3.2.3",
     "atob": "^2.1.2",
     "chai": "^4.1.2",
     "conventional-changelog": "~1.1.0",
@@ -65,7 +66,7 @@
   },
   "files": [
     "src/lib",
-    "src/decode.js",
+    "src/decode.ts",
     "src/sign.js",
     "src/verify.js"
   ]
