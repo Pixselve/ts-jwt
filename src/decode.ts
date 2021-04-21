@@ -5,6 +5,7 @@ export interface DecodeOptions {
   json?: boolean;
 }
 export function decode(token: string, options: DecodeOptions & { json: true } | DecodeOptions & { complete: true }): null | Record<string, any>;
+export function decode(token: string, options?: DecodeOptions): null | Record<string, any> | string;
 export function decode(token: string, options?: DecodeOptions): null | Record<string, any> | string {
   // @ts-ignore - Bad types, jws.decode accept a second argument. Check https://github.com/auth0/node-jws/blob/8857ee77623104e5cf9955932165ddf9cea1b72c/lib/verify-stream.js#L57
   const decoded = jws.decode(token, options);
