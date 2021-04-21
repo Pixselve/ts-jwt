@@ -1,6 +1,6 @@
 {
   "name": "ts-jwt",
-  "version": "8.5.2",
+  "version": "8.5.4",
   "description": "JSON Web Token implementation (symmetric and asymmetric)",
   "main": "dist/index.js",
   "nyc": {
