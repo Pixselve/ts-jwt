@@ -154,11 +154,10 @@ export type SignCallback = (
   encoded?: string
 ) => void;
 
-export default function sign(payload: string | Buffer | object, secretOrPrivateKey: Secret, callback: SignCallback): void;
-
-export default function sign(payload: string | Buffer | object, secretOrPrivateKey: Secret, options?: SignOptions): string;
-export default function sign(payload: string | Buffer | object, secretOrPrivateKey: Secret, options: SignOptions, callback: SignCallback): void;
-export default function sign(payload: string | Buffer | object, secretOrPrivateKey: Secret, options: SignOptions | SignCallback = {} as SignOptions, callback?: SignCallback): void | string {
+export function sign(payload: string | Buffer | object, secretOrPrivateKey: Secret, callback: SignCallback): void;
+export function sign(payload: string | Buffer | object, secretOrPrivateKey: Secret, options?: SignOptions): string;
+export function sign(payload: string | Buffer | object, secretOrPrivateKey: Secret, options: SignOptions, callback: SignCallback): void;
+export function sign(payload: string | Buffer | object, secretOrPrivateKey: Secret, options: SignOptions | SignCallback = {} as SignOptions, callback?: SignCallback): void | string {
   if (typeof options === "function") {
     callback = options;
     options = {} as SignOptions;

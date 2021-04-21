@@ -1,7 +1,7 @@
 import JsonWebTokenError from "./lib/JsonWebTokenError";
 import { NotBeforeError } from "./lib/NotBeforeError";
 import { TokenExpiredError } from "./lib/TokenExpiredError";
-import decode from "./decode";
+import { decode } from "./decode";
 import { Secret } from "./types";
 import {Algorithm} from "./types";
 
@@ -75,7 +75,7 @@ export type GetPublicKeyOrSecret = (
 
 export function verify(token: string, secretOrPublicKey: Secret | GetPublicKeyOrSecret, options?: VerifyOptions): object | string;
 export function verify(token: string, secretOrPublicKey: Secret | GetPublicKeyOrSecret, callback?: VerifyCallback): void;
-export default function verify(token: string, secretOrPublicKey: Secret | GetPublicKeyOrSecret, options: VerifyOptions | VerifyCallback = {}, callback?: VerifyCallback): any {
+export function verify(token: string, secretOrPublicKey: Secret | GetPublicKeyOrSecret, options: VerifyOptions | VerifyCallback = {}, callback?: VerifyCallback): any {
   if ((typeof options === 'function') && !callback) {
     callback = options;
     options = {};
