@@ -11,10 +11,11 @@
 //   value: require('./decode'),
 // });
 
-export * from "./sign";
-export * from "./verify";
-export * from "./decode";
-export * from "./types";
-export * from "./lib/TokenExpiredError";
-export * from "./lib/NotBeforeError";
-export * from "./lib/JsonWebTokenError";
+import { decode } from "./decode";
+import JsonWebTokenError from "./lib/JsonWebTokenError";
+import { NotBeforeError } from "./lib/NotBeforeError";
+import { TokenExpiredError } from "./lib/TokenExpiredError";
+import { sign } from "./sign";
+import { verify } from "./verify";
+
+export { sign, verify, decode, JsonWebTokenError, NotBeforeError, TokenExpiredError };
