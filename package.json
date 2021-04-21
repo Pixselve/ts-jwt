@@ -1,8 +1,8 @@
 {
-  "name": "jsonwebtoken",
-  "version": "8.5.1",
+  "name": "ts-jwt",
+  "version": "8.5.2",
   "description": "JSON Web Token implementation (symmetric and asymmetric)",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "nyc": {
     "check-coverage": true,
     "lines": 95,
@@ -21,14 +21,17 @@
   "scripts": {
     "lint": "eslint .",
     "coverage": "nyc mocha --use_strict",
-    "test": "npm run lint && npm run coverage && cost-of-modules"
+    "test": "npm run lint && npm run coverage && cost-of-modules",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/auth0/node-jsonwebtoken"
+    "url": "https://github.com/Pixselve/ts-jwt"
   },
   "keywords": [
-    "jwt"
+    "jwt",
+    "typescript"
   ],
   "author": "auth0",
   "license": "MIT",
@@ -75,9 +78,6 @@
     "node": ">=4"
   },
   "files": [
-    "src/lib",
-    "src/decode.ts",
-    "src/sign.ts",
-    "src/verify.ts"
+    "dist"
   ]
 }
