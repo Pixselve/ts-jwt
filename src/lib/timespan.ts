@@ -1,10 +1,10 @@
-var ms = require('ms');
+import ms from "ms";
 
-module.exports = function (time, iat) {
-  var timestamp = iat || Math.floor(Date.now() / 1000);
+export default function (time: string | number, iat: number) {
+  const timestamp = iat || Math.floor(Date.now() / 1000);
 
   if (typeof time === 'string') {
-    var milliseconds = ms(time);
+    const milliseconds = ms(time);
     if (typeof milliseconds === 'undefined') {
       return;
     }
@@ -15,4 +15,4 @@ module.exports = function (time, iat) {
     return;
   }
 
-};
+}
